@@ -1,67 +1,63 @@
-# 🛠️ Custom DNS Server
+🛠️ Custom DNS Server
 
-## 📌 Overview
-A lightweight **DNS server** built in Python using [dnslib](https://pypi.org/project/dnslib/).
+📌 Overview
+A lightweight DNS server built in Python using dnslib.
 It supports local zone resolution, recursive forwarding, caching, and structured logging for analysis.
-Designed for hands‑on exploration of DNS internals, performance testing, and educational demos.
 
----
+This project is designed for:
+-Hands-on exploration of DNS internals
+-Performance testing
+-Educational demonstrations
 
-## ⚙️ Features
-- UDP request handling
-- DNS header parsing via `dnslib`
-- Local zone resolution (example.local)
-- Recursive forwarding to **Google DNS (8.8.8.8)**
-- Thread‑safe upstream response caching into `ZONE`
-- Plain file logging (`dns.log`) with CSV conversion via `logtocsv.py`
-- Concurrent performance benchmarking with `perf_test.py`
 
----
+⚙️ Features
 
-## 🗂️ File Structure
+✅ UDP request handling
+✅ DNS header parsing via dnslib
+✅ Local zone resolution (example.local)
+✅ Recursive forwarding to Google DNS (8.8.8.8)
+✅ Thread-safe upstream response caching into ZONE
+✅ Plain file logging (dns.log)
+✅ CSV conversion via logtocsv.py
+✅ Concurrent performance benchmarking with perf_test.py
+
+
+🗂️ File Structure
+
 Custom-DNS-Server/
-│── dns_server.py
-│── logtocsv.py
-│── perf_test.py
-│── LICENSE
-│── README.md
+├── dns_server.py
+├── logtocsv.py
+├── perf_test.py
+├── LICENSE
+└── README.md
 
----
 
-## ⚙️ Installation
+⚙️ Installation
+
 Clone the repository and install dependencies:
 
-```bash
 git clone https://github.com/Boffin-Omega/Custom-DNS-Server.git
 cd Custom-DNS-Server
 pip install dnslib
----
 
-## 🚀 Usage
 
-### Start the DNS Server
-```bash
-python dns_server.py
-Default host: 127.0.0.1
-Default port: 5053
+🚀 Usage
 
----
+1-> ▶️ Start the DNS Server -> python dns_server.py
 
-### Convert Logs to CSV
-```bash
-python logtocsv.py
+-Default Configuration:
+    Host: 127.0.0.1
+    Port: 5053
 
----
+2-> 📊 Convert Logs to CSV -> python logtocsv.py
 
-### Run Performance Tests
-```bash
-python perf_test.py
+3-> ⚡ Run Performance Tests -> python perf_test.py
 
----
 
-## 🧩 Tech Stack
-- **Language:** Python 3.x
-- **Library:** dnslib
-- **Networking:** UDP sockets
-- **Data Handling:** CSV log conversion
-- **Testing:** Multithreaded performance benchmarking
+🧩 Tech Stack
+
+Language: Python 3.x
+Library: dnslib
+Networking: UDP sockets
+Data Handling: CSV log conversion
+Testing: Multithreaded performance benchmarking
